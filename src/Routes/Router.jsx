@@ -6,6 +6,7 @@ import About from "../Pages/About/About";
 import Travel from "../Pages/Travel/Travel";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import TourDetails from "../Components/TourDetails/TourDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,10 +16,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("/tourPlan.json"),
       },
       {
         path: "/booked",
         element: <Booked></Booked>,
+      },
+      {
+        path: "/tour-details/:id",
+        element: <TourDetails></TourDetails>,
+        loader: () => fetch("/tourPlan.json"),
       },
       {
         path: "/about",
