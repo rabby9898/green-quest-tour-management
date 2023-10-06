@@ -1,0 +1,112 @@
+import { Link, NavLink } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+
+const Navbar = () => {
+  const NavLinks = (
+    <>
+      <li className="text-base text-black font-medium uppercase">
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-green-700 underline bold"
+              : ""
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li className="text-base text-black font-medium uppercase">
+        <NavLink
+          to="/travel"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-green-700 underline" : ""
+          }
+        >
+          Travel
+        </NavLink>
+      </li>
+      <li className="text-base text-black font-medium uppercase">
+        <NavLink
+          to="/booked"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-green-700 underline" : ""
+          }
+        >
+          Booked Plan
+        </NavLink>
+      </li>
+      <li className="text-base text-black font-medium uppercase">
+        <NavLink
+          to="/about"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-green-700 underline" : ""
+          }
+        >
+          About Us
+        </NavLink>
+      </li>
+      <li className="text-base text-black font-medium uppercase">
+        <NavLink
+          to="/register"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-green-700 underline" : ""
+          }
+        >
+          Register
+        </NavLink>
+      </li>
+    </>
+  );
+  return (
+    <div>
+      <div className="navbar px-36 py-10 shadow-lg">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className=" menu-sm dropdown-content mt-3 z-[1] p-2 gap-10"
+            >
+              {NavLinks}
+            </ul>
+          </div>
+          <Link to="/" className="text-2xl font-semibold text-green-800 ">
+            Green Quest
+          </Link>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu-horizontal px-1 gap-10">{NavLinks}</ul>
+        </div>
+        <div className="navbar-end gap-8">
+          <FaUserCircle className="text-3xl hover:text-green-700"></FaUserCircle>
+          <Link
+            to="/login"
+            className="text-base text-black font-medium uppercase"
+          >
+            Login
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
