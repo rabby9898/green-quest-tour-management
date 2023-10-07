@@ -1,11 +1,19 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   const { displayName, photoURL, email, phoneNumber, uid, address } = user;
+  useEffect(() => {
+    AOS.init({ duration: "2000" });
+  }, []);
   return (
-    <div className="flex justify-center items-center px-5 md:px-10 lg:px-36 py-5 md:py-28 shadow-lg mx-auto">
+    <div
+      data-aos="fade-down-right"
+      className="flex justify-center items-center px-5 md:px-10 lg:px-36 py-5 md:py-28 shadow-lg mx-auto"
+    >
       <div className="card w-[700px] bg-base-100 shadow-xl">
         <div className="p-10">
           <h1 className="text-2xl font-semibold">Your Profile Info:</h1>

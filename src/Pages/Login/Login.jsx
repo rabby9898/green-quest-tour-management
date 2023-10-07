@@ -4,6 +4,9 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
@@ -26,8 +29,14 @@ const Login = () => {
         toast.error(error.message);
       });
   };
+  useEffect(() => {
+    AOS.init({ duration: "2000" });
+  }, []);
   return (
-    <div className="px-3 md:px-10 lg:px-36 py-5 md:py-10">
+    <div
+      data-aos="zoom-out-down"
+      className="px-3 md:px-10 lg:px-36 py-5 md:py-10"
+    >
       <div className="flex justify-center mx-auto my-16">
         <div>
           <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">

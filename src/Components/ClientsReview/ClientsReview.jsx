@@ -1,6 +1,15 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const ClientsReview = () => {
+  useEffect(() => {
+    AOS.init({ duration: "2000" });
+  }, []);
   return (
-    <div className="px-5 md:px-10 lg:px-36 py-5 md:py-28 ">
+    <div
+      data-aos="zoom-in-up"
+      className="px-5 md:px-10 lg:px-36 py-5 md:py-28 "
+    >
       <div className="my-20">
         <h1 className="text-4xl md:text-6xl text-green-700 font-bold text-center ">
           Clients Review

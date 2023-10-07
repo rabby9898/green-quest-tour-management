@@ -1,8 +1,14 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const DisplayBook = ({ book }) => {
   const { title, image, Status, travel_period } = book;
+  useEffect(() => {
+    AOS.init({ duration: "2000" });
+  }, []);
   return (
     <div>
-      <div className="">
+      <div data-aos="fade-down-right" className="">
         <div className="w-full lg:w-[750px]  card card-side bg-base-100 shadow-xl">
           <figure>
             <img

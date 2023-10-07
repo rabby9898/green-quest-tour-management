@@ -1,8 +1,14 @@
 import { Carousel } from "@material-tailwind/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Banner = () => {
+  useEffect(() => {
+    AOS.init({ duration: "2000" });
+  }, []);
   return (
-    <div>
+    <div data-aos="zoom-in-left">
       <Carousel
         // autoplay={true}
         // loop={true}

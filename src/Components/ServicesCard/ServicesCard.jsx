@@ -5,12 +5,21 @@ import {
   BiSolidDrink,
 } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ServicesCard = ({ item }) => {
+  useEffect(() => {
+    AOS.init({ duration: "2000" });
+  }, []);
   const { id, title, image, price, details, travel_period, duration } = item;
   return (
     <>
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div
+        data-aos="zoom-out-left"
+        className="card w-full bg-base-100 shadow-xl"
+      >
         <img
           className="w-full h-[200px] md:h-[350px] rounded-t-xl"
           src={image}

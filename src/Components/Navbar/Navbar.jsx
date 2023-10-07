@@ -1,11 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  useEffect(() => {
+    AOS.init({ duration: "2000" });
+  }, []);
 
   const handleSignOut = () => {
     logOut()
@@ -65,7 +70,7 @@ const Navbar = () => {
         </li>
       )}
       {!user && (
-        <li className="text-base p-4 text-black font-medium uppercase">
+        <li className="text-base text-black font-medium uppercase">
           <NavLink
             to="/register"
             className={({ isActive, isPending }) =>
@@ -80,7 +85,10 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar px-2 md:px-10 lg:px-36 py-5 md:py-10 shadow-lg">
+      <div
+        data-aos="fade-left"
+        className="navbar px-2 md:px-10 lg:px-36 py-5 md:py-10 shadow-lg"
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
