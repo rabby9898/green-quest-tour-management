@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { saveBookId } from "../../LocalStorage/LocalStorage";
+import toast from "react-hot-toast";
 
 const TourDetails = () => {
   const [selectedTour, setSelectedTour] = useState([]);
   const cards = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
-  const newCards = cards?.find((card) => card.id === idInt);
+
   useEffect(() => {
+    const newCards = cards?.find((card) => card.id === idInt);
     setSelectedTour(newCards);
     saveBookId(id);
     console.log(newCards);
@@ -24,6 +26,9 @@ const TourDetails = () => {
     travel_period,
   } = selectedTour;
 
+  const handleToast = () => {
+    toast.success("Congratulations! You Have Booked the tour Successfully");
+  };
   return (
     <div className="px-36 h-full py-20">
       <img className="w-full h-[600px] rounded-xl" src={image} alt="" />
@@ -55,12 +60,12 @@ const TourDetails = () => {
 
               <p>What Are You Waiting For?</p>
               <div>
-                <Link
-                  to="/booked"
-                  className="btn flex justify-center px-10 text-lg items-baseline h-fit bg-green-700 py-4 text-white border-0 outline-0 hover:border hover:border-green-700 hover:text-green-700 hover:bg-transparent"
+                <button
+                  onClick={handleToast}
+                  className="btn w-full flex justify-center px-10 text-lg items-baseline h-fit bg-green-700 py-4 text-white border-0 outline-0 hover:border hover:border-green-700 hover:text-green-700 hover:bg-transparent"
                 >
                   Book Now
-                </Link>
+                </button>
               </div>
             </div>
           </div>
