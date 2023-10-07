@@ -23,8 +23,7 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
-        toast.error(error);
+        toast.error(error.message);
       });
   };
   return (

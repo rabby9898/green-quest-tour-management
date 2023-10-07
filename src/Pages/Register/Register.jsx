@@ -14,7 +14,23 @@ const Register = () => {
     const imgUrl = e.target.imgUrl.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+
     console.log(name, email, password);
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please Enter a Valid Email Address!");
+      return;
+    } else if (!/(.{6,})/.test(password)) {
+      toast.error("Your Password Should Minimum 6 Character");
+      return;
+    } else if (!/(?=.*?[A-Z])/.test(password)) {
+      toast.error("Your Password Must Have At least a Capital Letter");
+      return;
+    } else if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+      toast.error("Your Password Must Have At least One Special Character");
+      return;
+    }
 
     signUpUser(email, password)
       .then((res) => {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const Upcoming = () => {
   const [days, setDays] = useState(15);
   const [hours, setHours] = useState(10);
@@ -28,28 +29,45 @@ const Upcoming = () => {
     };
   }, []);
   return (
-    <div className="flex justify-center items-center px-5 md:px-10 lg:px-36 py-5 md:py-28 gap-8">
-      <div>
-        <h1 className="text-5xl">
-          Upcoming <span className="text-green-700 font-semibold">Tour</span>:
+    <div className="px-5 md:px-10 lg:px-36 py-5 md:py-28 ">
+      <div className="my-20">
+        <h1 className="text-6xl text-green-700 font-bold text-center ">
+          Trending campaign
         </h1>
+        <hr className="bg-green-700 w-[130px] mt-3 h-[5px] mx-auto" />
       </div>
-      <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-        <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
-          <span className="countdown font-mono text-5xl">{days}</span>
-          days
+      <div className="flex justify-center items-center gap-8">
+        <div>
+          <h1 className="text-5xl">
+            Upcoming <span className="text-green-700 font-semibold">Tour</span>:
+          </h1>
         </div>
-        <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
-          <span className="countdown font-mono text-5xl">{hours}</span>
-          hours
+        <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+            <span className="countdown font-mono text-5xl">{days}</span>
+            days
+          </div>
+          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+            <span className="countdown font-mono text-5xl">{hours}</span>
+            hours
+          </div>
+          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+            <span className="countdown font-mono text-5xl">{minutes}</span>
+            min
+          </div>
+          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+            <span className="countdown font-mono text-5xl">{seconds}</span>
+            sec
+          </div>
         </div>
-        <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
-          <span className="countdown font-mono text-5xl">{minutes}</span>
-          min
-        </div>
-        <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
-          <span className="countdown font-mono text-5xl">{seconds}</span>
-          sec
+      </div>
+      <div>
+        <div className="flex justify-center mx-auto items-center py-16">
+          <Link to="/login">
+            <button className="bg-green-700 flex justify-center text-sm text-white px-10 py-3 rounded-none">
+              Make Your Reservation →
+            </button>
+          </Link>
         </div>
       </div>
     </div>
