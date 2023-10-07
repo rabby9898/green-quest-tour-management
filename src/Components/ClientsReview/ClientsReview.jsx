@@ -1,8 +1,8 @@
 const ClientsReview = () => {
   return (
-    <div>
+    <div className="px-5 md:px-10 lg:px-36 py-5 md:py-28 ">
       <div className="my-20">
-        <h1 className="text-6xl text-green-700 font-bold text-center ">
+        <h1 className="text-4xl md:text-6xl text-green-700 font-bold text-center ">
           Clients Review
         </h1>
         <hr className="bg-green-700 w-[130px] mt-3 h-[5px] mx-auto" />

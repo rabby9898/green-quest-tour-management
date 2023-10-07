@@ -5,9 +5,11 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [show, setShow] = useState(false);
   const { signUpUser, googleSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -42,6 +44,7 @@ const Register = () => {
         })
           .then(() => {
             toast.success("You Have Registered Successfully");
+            navigate("/");
           })
           .catch((error) => {
             toast.error(error);
@@ -58,13 +61,14 @@ const Register = () => {
         const user = result.user;
         console.log(user);
         toast.success("You Have Registered Successfully");
+        navigate("/");
       })
       .catch((error) => {
         toast.error(error);
       });
   };
   return (
-    <div>
+    <div className="px-5 md:px-10 lg:px-36 py-5 md:py-28">
       <div className="flex justify-center mx-auto my-16">
         <div>
           <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">

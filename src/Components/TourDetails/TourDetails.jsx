@@ -30,11 +30,15 @@ const TourDetails = () => {
     toast.success("Congratulations! You Have Booked the tour Successfully");
   };
   return (
-    <div className="px-36 h-full py-20">
-      <img className="w-full h-[600px] rounded-xl" src={image} alt="" />
+    <div className="h-full px-5 md:px-10 lg:px-36 py-5 md:py-28">
+      <img
+        className="w-full h-[400px] md:h-[600px] rounded-xl"
+        src={image}
+        alt=""
+      />
 
-      <div className="grid grid-cols-3 justify-items-center gap-10 py-10">
-        <div className="col-span-2 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-10 py-10">
+        <div className="col-span-1 md:col-span-2">
           <h4 className="text-3xl font-semibold my-10">{title}</h4>
           <h4 className="text-xl font-semibold mb-2">About Your Trip</h4>
 
@@ -46,8 +50,8 @@ const TourDetails = () => {
           <h4 className="text-xl font-semibold my-5">Tour Plan</h4>
           <p className="text-base text-gray-600 my-5">{tour_plan}</p>
         </div>
-        <div className="border-l p-10">
-          <div className="card w-96 bg-base-100 shadow-xl image-full my-10">
+        <div className="border-0 md:border-l p-1 md:p-10">
+          <div className="card w-full bg-base-100 shadow-xl image-full my-5 md:my-10">
             <figure>
               <img src={image} alt="" />
             </figure>

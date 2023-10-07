@@ -20,7 +20,7 @@ const Booked = () => {
     }
   }, [cards]);
   return (
-    <div className=" px-5 md:px-10 lg:px-36 py-5 md:py-10">
+    <div className="px-5 md:px-10 lg:px-36 py-5 md:py-10">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
         {booked.map((book) => (
           <DisplayBook key={book.id} book={book}></DisplayBook>

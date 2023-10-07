@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           toastOptions={{
             duration: 4000,
             style: {
-              padding: "24px 30px",
+              padding: "20px 30px",
               background: "#363636",
               color: "#fff",
               textTransform: "capitalize",

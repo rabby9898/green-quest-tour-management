@@ -31,31 +31,31 @@ const Upcoming = () => {
   return (
     <div className="px-5 md:px-10 lg:px-36 py-5 md:py-28 ">
       <div className="my-20">
-        <h1 className="text-6xl text-green-700 font-bold text-center ">
+        <h1 className="text-4xl md:text-6xl text-green-700 font-bold text-center ">
           Trending campaign
         </h1>
         <hr className="bg-green-700 w-[130px] mt-3 h-[5px] mx-auto" />
       </div>
-      <div className="flex justify-center items-center gap-8">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
         <div>
-          <h1 className="text-5xl">
+          <h1 className="text-3xl md:text-5xl">
             Upcoming <span className="text-green-700 font-semibold">Tour</span>:
           </h1>
         </div>
-        <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+        <div className="grid grid-flow-col gap-2 md:gap-5 text-center auto-cols-max">
+          <div className="flex flex-col p-1 md:p-5 bg-green-500 rounded-lg lg:rounded-box text-black -content">
             <span className="countdown font-mono text-5xl">{days}</span>
             days
           </div>
-          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+          <div className="flex flex-col p-1 md:p-5 bg-green-500 rounded-lg lg:rounded-box text-black -content">
             <span className="countdown font-mono text-5xl">{hours}</span>
             hours
           </div>
-          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+          <div className="flex flex-col p-1 md:p-5 bg-green-500 rounded-lg lg:rounded-box text-black -content">
             <span className="countdown font-mono text-5xl">{minutes}</span>
             min
           </div>
-          <div className="flex flex-col p-5 bg-green-500 rounded-box text-black -content">
+          <div className="flex flex-col p-1 md:p-5 bg-green-500 rounded-lg lg:rounded-box text-black -content">
             <span className="countdown font-mono text-5xl">{seconds}</span>
             sec
           </div>

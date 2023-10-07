@@ -65,7 +65,7 @@ const Navbar = () => {
         </li>
       )}
       {!user && (
-        <li className="text-base text-black font-medium uppercase">
+        <li className="text-base p-4 text-black font-medium uppercase">
           <NavLink
             to="/register"
             className={({ isActive, isPending }) =>
@@ -80,7 +80,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar px-5 md:px-10 lg:px-36 py-5 md:py-10 shadow-lg">
+      <div className="navbar px-2 md:px-10 lg:px-36 py-5 md:py-10 shadow-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -101,47 +101,54 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className=" menu-sm dropdown-content mt-3 z-[1] p-2 gap-10"
+              className="menu-sm dropdown-content mt-3 z-[1] p-2 gap-10 bg-green-300"
             >
               {NavLinks}
             </ul>
           </div>
-          <Link to="/" className="text-2xl font-semibold text-green-800 ">
+          <Link
+            to="/"
+            className="text-xl md:text-2xl font-semibold text-green-800"
+          >
             Green Quest
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu-horizontal px-1 gap-10">{NavLinks}</ul>
         </div>
-        <div className="navbar-end gap-8">
-          {user ? (
-            <>
-              <p>{user.displayName}</p>
-              <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img src={user.photoURL} />
-                </div>
-              </label>
-            </>
-          ) : (
-            <FaUserCircle className="text-3xl hover:text-green-700"></FaUserCircle>
-          )}
+        <div className="navbar-end gap-2 md:gap-8">
+          <div>
+            {user ? (
+              <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-2">
+                <p className="w-max text-sm md:text-base">{user.displayName}</p>
+                <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user.photoURL} />
+                  </div>
+                </label>
+              </div>
+            ) : (
+              <FaUserCircle className="text-3xl hover:text-green-700"></FaUserCircle>
+            )}
+          </div>
 
-          {user ? (
-            <Link
-              onClick={handleSignOut}
-              className="text-base text-black font-medium uppercase"
-            >
-              Logout
-            </Link>
-          ) : (
-            <Link
-              to="/login"
-              className="text-base text-black font-medium uppercase"
-            >
-              Login
-            </Link>
-          )}
+          <div>
+            {user ? (
+              <Link
+                onClick={handleSignOut}
+                className="text-base text-black font-medium uppercase"
+              >
+                Logout
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                className="text-base text-black font-medium uppercase"
+              >
+                Login
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

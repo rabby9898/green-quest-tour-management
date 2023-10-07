@@ -27,7 +27,7 @@ const Login = () => {
       });
   };
   return (
-    <div>
+    <div className="px-3 md:px-10 lg:px-36 py-5 md:py-10">
       <div className="flex justify-center mx-auto my-16">
         <div>
           <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">

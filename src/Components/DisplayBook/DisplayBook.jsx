@@ -3,9 +3,13 @@ const DisplayBook = ({ book }) => {
   return (
     <div>
       <div className="">
-        <div className="w-[750px] card card-side bg-base-100 shadow-xl">
+        <div className="w-full lg:w-[750px]  card card-side bg-base-100 shadow-xl">
           <figure>
-            <img className="w-[500px] h-[300px]" src={image} alt="" />
+            <img
+              className="w-full lg:w-[500px] h-full lg:h-[300px]"
+              src={image}
+              alt=""
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title">{title}</h2>
