@@ -21,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/booked",
         element: <Booked></Booked>,
+        loader: () => fetch("/tourPlan.json"),
       },
       {
         path: "/tour-details/:id",

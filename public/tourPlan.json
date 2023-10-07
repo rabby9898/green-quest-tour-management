@@ -8,6 +8,7 @@
       "travel_period": "22 Nov 2023 to 25 Nov 2023",
       "description": "A romantic holiday awaits you at Sofitel Kia Ora Moorea Beach Resort, a gorgeous resort boasting Polynesian bungalows and villas furnished with modern amenities. Experience your dream holiday in a luxurious atmosphere enjoying a variety of dining options and indulging in the fusion of local flavours and authentic French cuisine. Marvel at the lush mountain peaks and the breathtaking colours of the lagoon. Relaxation may be top priority for some whilst others will uncover the many activities Moorea has to offer.",
       "duration": "8 days",
+      "Status": "Booked",
       "Highlights": "1. Luxurious accommodation, 2. Scenic beauty of Moorea, 3. Spa and wellness facilities, 4. Delicious cuisine",
       "tour_plan": "Day 1: Arrival in Tahiti - Transfer to Sofitel Kia Ora Moorea Beach Resort & Spa, Day 2: Island exploration and water activities, Day 3: Relax at the resort, Day 4: Moorea island tour, Day 5: Spa and leisure, Day 6: Moorea adventures, Day 7: Return to Tahiti, Day 8: Departure from Tahiti"
 
@@ -23,6 +24,7 @@
       "description": "Embark on a romantic journey through the enchanting streets of Paris, where every corner exudes an irresistible charm that has captivated lovers for centuries. Indulge in the unparalleled beauty of the City of Light as you ascend the iconic Eiffel Tower, offering panoramic vistas that will steal your breath away. Stroll hand in hand along the Seine River, savoring the city's timeless allure. Immerse yourself in the world-renowned art and culture of the Louvre Museum, and savor gourmet delights in cozy Parisian bistros. Paris is a symphony of romance, and this experience promises to immerse you in its melodies, creating memories that will forever resonate in your heart.",
       "Highlights": "1. Eiffel Tower visit, 2. Louvre Museum tour, 3. Seine River cruise, 4. Gourmet dining",
       "duration": "6 days",
+      "Status": "Booked",
       "tour_plan":"Day 1: Arrival in Paris - Eiffel Tower visit, Day 2: Explore the Louvre Museum, Day 3: Seine River cruise, Day 4: Montmartre and Sacré-Cœur Basilica, Day 5: Gourmet dining experience, Day 6: Departure from Paris"
     },
     {
@@ -34,6 +36,7 @@
       "travel_period": "5 Jan 2024 to 10 Jan 2024",
       "description": "Embark on an unforgettable adventure in the heart of the city that never sleeps - New York City. Immerse yourself in the electric atmosphere of the Big Apple as you explore its iconic landmarks, from the dazzling lights of Times Square to the historic Statue of Liberty standing tall in the harbor. Dive into the thriving cultural scene with mesmerizing Broadway shows that transport you to different worlds with each performance. This bustling metropolis is a melting pot of cultures, offering an array of culinary delights, art, and music that will leave you in awe. Wander through the serene oasis of Central Park, a green jewel amidst the urban jungle, and discover world-class museums showcasing humanity's creativity and history. New York City is a tapestry of experiences, and this journey promises to weave together the vibrant threads of its culture, art, and history into an extraordinary adventure that will stay with you for a lifetime.",
       "duration": "5 days",
+      "Status": "Booked",
       "Highlights": "1. Times Square, 2. Statue of Liberty tour, 3. Broadway show, 4. Central Park exploration",
       "tour_plan":"Day 1: Arrival in NYC - Times Square, Day 2: Statue of Liberty and Ellis Island visit, Day 3: Broadway show, Day 4: Central Park and museums, Day 5: Shopping and departure from NYC"
 
@@ -47,6 +50,7 @@
       "travel_period": "15 Feb 2024 to 20 Feb 2024",
       "description": "Unwind and rejuvenate on the pristine shores of Bali, a tropical paradise that beckons with its breathtaking beauty and rich cultural heritage. As you step onto this enchanting island, you'll be greeted by sun-kissed beaches and crystal-clear waters that invite you to bask in their tranquility. Explore ancient temples like the magnificent Tanah Lot, perched on the sea cliffs, and immerse yourself in the mystique of the Ubud Monkey Forest, where nature and spirituality intertwine. Let the soothing Balinese spa treatments transport you to a world of relaxation and inner peace, as skilled therapists work their magic amidst lush greenery. Bali is a symphony of nature, culture, and serenity, and this getaway promises to immerse you in its harmonious melodies, leaving you with cherished memories of this tropical haven.",
       "duration": "6 days",
+      "Status": "Booked",
       "Highlights": "1. Beachfront luxury resorts, 2. Tanah Lot Temple visit, 3. Ubud Monkey Forest exploration, 4. Balinese spa treatments",
       "tour_plan": "Day 1: Arrival in Bali - Check-in at beachfront resort, Day 2: Tanah Lot Temple and beach relaxation, Day 3: Ubud Monkey Forest and cultural tour, Day 4: Spa and wellness day, Day 5: Beach activities, Day 6: Departure from Bali"
 
@@ -60,6 +64,7 @@
       "travel_period": "20 Mar 2024 to 25 Mar 2024",
       "description": "Journey through time and history as you traverse the cobbled streets of Rome, the Eternal City, where every corner tells a story of the past. Explore iconic landmarks like the Colosseum, where ancient gladiators once battled, and gaze in awe at the magnificent beauty of the Vatican City, home to the Sistine Chapel's awe-inspiring frescoes. Stroll through charming piazzas like Piazza Navona and toss a coin into the Trevi Fountain, making a wish that connects you to centuries of tradition. Savor the exquisite flavors of Italian cuisine, from delectable pasta dishes to tantalizing gelato. Rome is a living museum of art, history, and culinary delights, and this journey promises to immerse you in its grandeur and timelessness, creating memories that will forever resonate with the city's eternal spirit.",
       "duration": "6 days",
+      "Status": "Booked",
       "Highlights": "1. Colosseum and Roman Forum tour, 2. Vatican City and Sistine Chapel visit, 3. Piazza Navona and Trevi Fountain, 4. Italian cuisine tasting",
       "tour_plan":"Day 1: Arrival in Rome - Colosseum and Roman Forum, Day 2: Vatican City and Sistine Chapel, Day 3: Piazza Navona and Trevi Fountain, Day 4: Italian cuisine tour, Day 5: Ancient Rome exploration, Day 6: Departure from Rome"
 
@@ -73,6 +78,7 @@
       "travel_period": "10 Apr 2024 to 15 Apr 2024",
       "description": "Embark on an exhilarating adventure in the bustling metropolis of Tokyo, where tradition seamlessly blends with modernity, creating a dynamic tapestry of experiences. Witness the mesmerizing Shibuya Crossing, a symbol of Tokyo's urban energy, and explore the trendy Harajuku district, where fashion and youth culture converge. Discover the serene beauty and spiritual depth of Asakusa Senso-ji Temple, a timeless oasis in the midst of the city's hustle and bustle. Dive into the magic of Tokyo Disneyland, where fairy tales come to life and joy knows no bounds. Indulge in the intricate flavors of sushi and ramen, a culinary journey that showcases Japan's gastronomic excellence. Tokyo is a kaleidoscope of innovation and tradition, and this adventure promises to immerse you in its vibrant hues, creating memories that capture the essence of modern Japan.",
       "duration": "6 days",
+      "Status": "Booked",
       "highlights": "1. Shibuya Crossing and Harajuku fashion, 2. Asakusa Senso-ji Temple visit, 3. Tokyo Disneyland adventure, 4. Sushi and ramen tasting",
       "tour_plan": "Day 1: Arrival in Tokyo - Shibuya Crossing and Harajuku, Day 2: Asakusa Senso-ji Temple and cultural tour, Day 3: Tokyo Disneyland, Day 4: Tsukiji Fish Market and shopping, Day 5: Sushi and ramen tasting, Day 6: Departure from Tokyo"
     }
