@@ -34,16 +34,6 @@ const Navbar = () => {
       </li>
       <li className="text-base text-black font-medium uppercase">
         <NavLink
-          to="/travel"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-700 underline" : ""
-          }
-        >
-          Travel
-        </NavLink>
-      </li>
-      <li className="text-base text-black font-medium uppercase">
-        <NavLink
           to="/booked"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-green-700 underline" : ""
