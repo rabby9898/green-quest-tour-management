@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useNavigate, useLocation } from "react-router-dom";
+import toast from "react-hot-toast";
+
 const Login = () => {
+  const { signInUser } = useContext(AuthContext);
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+
+    signInUser(email, password)
+      .then((res) => {
+        console.log(res.user);
+        toast.success("successfully login");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(error);
+      });
+  };
   return (
     <div>
       <div className="flex justify-center mx-auto my-16">
@@ -12,7 +36,10 @@ const Login = () => {
               Login your account.
             </h4>
 
-            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+            <form
+              onSubmit={handleSignIn}
+              className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+            >
               <div className="mb-4 flex flex-col gap-6">
                 <div className="relative h-11 w-full min-w-[200px]">
                   <input

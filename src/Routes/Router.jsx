@@ -7,6 +7,8 @@ import Travel from "../Pages/Travel/Travel";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import TourDetails from "../Components/TourDetails/TourDetails";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import Profile from "../Pages/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +22,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/booked",
-        element: <Booked></Booked>,
+        element: (
+          <PrivateRoute>
+            <Booked></Booked>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/tourPlan.json"),
       },
       {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/tour-details/:id",
-        element: <TourDetails></TourDetails>,
+        element: (
+          <PrivateRoute>
+            <TourDetails></TourDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/tourPlan.json"),
       },
       {

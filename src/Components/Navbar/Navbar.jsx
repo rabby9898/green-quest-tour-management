@@ -1,7 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("Sign-out successful");
+      })
+      .catch((error) => {
+        toast.error(error);
+      });
+  };
   const NavLinks = (
     <>
       <li className="text-base text-black font-medium uppercase">
@@ -48,16 +62,30 @@ const Navbar = () => {
           About Us
         </NavLink>
       </li>
-      <li className="text-base text-black font-medium uppercase">
-        <NavLink
-          to="/register"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-700 underline" : ""
-          }
-        >
-          Register
-        </NavLink>
-      </li>
+      {user && (
+        <li className="text-base text-black font-medium uppercase">
+          <NavLink
+            to="/profile"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-green-700 underline" : ""
+            }
+          >
+            Profile
+          </NavLink>
+        </li>
+      )}
+      {!user && (
+        <li className="text-base text-black font-medium uppercase">
+          <NavLink
+            to="/register"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-green-700 underline" : ""
+            }
+          >
+            Register
+          </NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -96,13 +124,34 @@ const Navbar = () => {
           <ul className="menu-horizontal px-1 gap-10">{NavLinks}</ul>
         </div>
         <div className="navbar-end gap-8">
-          <FaUserCircle className="text-3xl hover:text-green-700"></FaUserCircle>
-          <Link
-            to="/login"
-            className="text-base text-black font-medium uppercase"
-          >
-            Login
-          </Link>
+          {user ? (
+            <>
+              <p>{user.displayName}</p>
+              <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user.photoURL} />
+                </div>
+              </label>
+            </>
+          ) : (
+            <FaUserCircle className="text-3xl hover:text-green-700"></FaUserCircle>
+          )}
+
+          {user ? (
+            <Link
+              onClick={handleSignOut}
+              className="text-base text-black font-medium uppercase"
+            >
+              Logout
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              className="text-base text-black font-medium uppercase"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
