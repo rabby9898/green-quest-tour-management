@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -9,7 +10,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Login = () => {
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser, googleSignIn } = useContext(AuthContext);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -17,12 +18,24 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
 
     signInUser(email, password)
       .then((res) => {
         console.log(res.user);
         toast.success("successfully login");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("You Have Registered Successfully");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -83,13 +96,19 @@ const Login = () => {
                 data-ripple-light="true"
                 value="Login"
               />
-              <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-                Do not have an account?{" "}
-                <Link className="font-medium text-green-900" to="/register">
-                  Sign Up
-                </Link>
-              </p>
             </form>
+            <button
+              onClick={handleGoogleSignIn}
+              className="w-full flex justify-center items-center gap-1 border-2 border-gray rounded-lg py-2 mt-10 mb-3 mt-10 text-base"
+            >
+              <FcGoogle className="text-xl" /> Sign In With Google
+            </button>
+            <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+              Do not have an account?{" "}
+              <Link className="font-medium text-green-900" to="/register">
+                Sign Up
+              </Link>
+            </p>
           </div>
         </div>
       </div>

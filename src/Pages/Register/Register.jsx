@@ -1,4 +1,3 @@
-import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useContext, useEffect, useState } from "react";
@@ -10,7 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const Register = () => {
   const [show, setShow] = useState(false);
-  const { signUpUser, googleSignIn } = useContext(AuthContext);
+  const { signUpUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,19 +50,6 @@ const Register = () => {
           .catch((error) => {
             toast.error(error);
           });
-      })
-      .catch((error) => {
-        toast.error(error);
-      });
-  };
-
-  const handleGoogleSignIn = () => {
-    googleSignIn()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        toast.success("You Have Registered Successfully");
-        navigate("/");
       })
       .catch((error) => {
         toast.error(error);
@@ -186,13 +172,6 @@ const Register = () => {
                 type="submit"
                 value="Register"
               />
-              <button
-                onClick={handleGoogleSignIn}
-                className="w-full flex justify-center items-center gap-1 border-2 border-gray rounded-lg py-2 mt-10 mb-3 text-base"
-              >
-                <FcGoogle className="text-xl" /> Sign up With Google
-              </button>
-
               <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                 Already have an account?{" "}
                 <Link className="font-medium text-green-700" to="/login">
