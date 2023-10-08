@@ -1,20 +1,34 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div>
       <footer className="footer footer-center p-10 bg-black text-base-content rounded px-5 md:px-10 lg:px-36 py-5 md:py-10">
         <nav className="grid grid-flow-col gap-4">
-          <a className="link link-hover text-white text-base hover:text-green-700">
+          <Link
+            to="/about"
+            className="link link-hover text-white text-base hover:text-green-700"
+          >
             About us
-          </a>
-          <a className="link link-hover text-white text-base hover:text-green-700">
+          </Link>
+          <Link
+            to="/about"
+            className="link link-hover text-white text-base hover:text-green-700"
+          >
             Contact
-          </a>
-          <a className="link link-hover text-white text-base hover:text-green-700">
+          </Link>
+          <Link
+            to="/login"
+            className="link link-hover text-white text-base hover:text-green-700"
+          >
             Travel
-          </a>
-          <a className="link link-hover text-white text-base hover:text-green-700">
+          </Link>
+          <Link
+            to="/contact"
+            className="link link-hover text-white text-base hover:text-green-700"
+          >
             Email
-          </a>
+          </Link>
         </nav>
         <nav>
           <div className="grid grid-flow-col gap-4">
