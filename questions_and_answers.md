@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: C: 3
 
-<iThe reason for this output is that the forEach method iterates over the nums array and for each element num, it checks if num is truthy (i.e., not equal to 0). For the elements 1, 2, and 3 in the array, the condition is true, so count is incremented for each of them. As a result, count becomes 3, and that's what's logged to the console.</i>
+<i The reason for this output is that the forEach method iterates over the nums array and for each element num, it checks if num is truthy. For the elements 1, 2, and 3 in the array, the condition is true, so count is incremented for each of them. As a result, count becomes 3, and that's what's logged to the console.</i>
 
 </p>
 </details>
