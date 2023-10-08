@@ -7,7 +7,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, updatedUser } = useContext(AuthContext);
+  console.log(user);
   useEffect(() => {
     AOS.init({ duration: "2000" });
   }, []);
@@ -131,7 +132,7 @@ const Navbar = () => {
                 <p className="w-max text-sm md:text-base">{user.displayName}</p>
                 <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    <img src={user.photoURL} />
+                    <img src={user.photoURL || updatedUser} />
                   </div>
                 </label>
               </div>

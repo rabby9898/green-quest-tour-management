@@ -35,7 +35,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        toast.success("You Have Registered Successfully");
+        toast.success("You Have Sign In Successfully");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
