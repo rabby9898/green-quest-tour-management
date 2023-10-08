@@ -16,10 +16,7 @@ const ServicesCard = ({ item }) => {
   const { id, title, image, price, details, travel_period, duration } = item;
   return (
     <>
-      <div
-        data-aos="zoom-out-left"
-        className="card w-full bg-base-100 shadow-xl"
-      >
+      <div data-aos="zoom-in-up" className="card w-full bg-base-100 shadow-xl">
         <img
           className="w-full h-[200px] md:h-[350px] rounded-t-xl"
           src={image}

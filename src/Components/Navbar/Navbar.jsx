@@ -87,7 +87,7 @@ const Navbar = () => {
   return (
     <div>
       <div
-        data-aos="fade-left"
+        data-aos="fade-down"
         className="navbar px-2 md:px-10 lg:px-36 py-5 md:py-10 shadow-lg"
       >
         <div className="navbar-start">

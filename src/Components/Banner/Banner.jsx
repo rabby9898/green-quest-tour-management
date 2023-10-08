@@ -8,7 +8,7 @@ const Banner = () => {
     AOS.init({ duration: "2000" });
   }, []);
   return (
-    <div data-aos="zoom-in-left">
+    <div data-aos="zoom-in-down">
       <Carousel
         // autoplay={true}
         // loop={true}

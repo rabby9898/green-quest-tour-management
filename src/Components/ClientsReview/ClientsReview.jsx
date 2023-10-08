@@ -7,7 +7,8 @@ const ClientsReview = () => {
   }, []);
   return (
     <div
-      data-aos="zoom-in-up"
+      data-aos="fade-up"
+      data-aos-duration="3000"
       className="px-5 md:px-10 lg:px-36 py-5 md:py-16 "
     >
       <div className="my-20">
